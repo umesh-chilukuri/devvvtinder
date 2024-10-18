@@ -19,3 +19,36 @@ app.use((req,res)=>{
 app.listen(3000,()=>{
     console.log("server started and listening to the user requests at port 3000 ");
 });
+
+
+
+order of writhing codes does matter in backend in creating request handlers
+order of routes matter
+
+
+there are diff http methods
+by default whatever you write in the url in of get type
+you cannot make post request via url
+for testing the api browser is not the right choice so we need a software called postman
+in postman you create a workspace
+then create a blank collection
+
+
+
+app.use   or .use method   is applicable to ll the http methods
+where as   app.get   or app.post only applicable to that particular methods
+
+"/ab?c"   then here b is optional
+"/ab+c"    then there can any number of b    /abbbbbbbbbbbbc
+"/ab*c"     means there can be anything between ab and c   "/abumeshc"
+
+
+
+explore query params and dynamic params
+
+
+
+if we are not sending any response in postman it will go to loop
+
+you can have multiple request handlers
+but you need to keep next as next()  function
