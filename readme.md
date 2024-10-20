@@ -52,3 +52,10 @@ if we are not sending any response in postman it will go to loop
 
 you can have multiple request handlers
 but you need to keep next as next()  function
+
+
+
+express handlingrequest function order (  err   request   responese   next)
+if you write err then it should in the last
+
+/////////////////////////////////////////////////never ttrust req.body//////////////////////////////////////////
