@@ -68,3 +68,30 @@ contains special information
 1 header    2.payload   3.verify signature(to validate token)
 
 json web token  pakage    we have sign and verify
+
+
+
+post/signup
+post/login
+post/logout
+
+get/profile/view
+patch/profile/edit
+patch/profile/password
+
+
+status:ignore,intrested.,accepted,rejected
+
+post/request/send/intrested/:userid
+post/request/send/accepted/:userid
+
+post/request/review/accepted/:userid
+post/request/review/rejected/:userid
+
+get/requests/receive
+get/connections
+get/feed
+
+
+//hgandle these many api is difficult so we use express routers
+//like first three should be under authrouter
