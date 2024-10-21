@@ -1,5 +1,6 @@
 const { default: mongoose } = require("mongoose");
 const validator=require("validator");
+const jwt=require("jsonwebtoken")
 
 
 const userSchema=mongoose.Schema({
@@ -23,8 +24,7 @@ const userSchema=mongoose.Schema({
     password:{
         type:String,
         required:true,
-        lowercase:true,
-        minlength:3,
+        maxlength: 100
 
 
     },
@@ -38,7 +38,13 @@ const userSchema=mongoose.Schema({
 
 },{timestamps:true});
 
+userSchema.methods.getJWT=async function (){
+    const user=this;
+    const token = jwt.sign({ _id: user._id }, "DEVTINDER@770");
+      console.log("Generated JWT Token:", token);
 
+      return token;
+}
 const User=mongoose.model("User",userSchema);
 
 module.exports=User;

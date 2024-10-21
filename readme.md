@@ -59,3 +59,12 @@ express handlingrequest function order (  err   request   responese   next)
 if you write err then it should in the last
 
 /////////////////////////////////////////////////never ttrust req.body//////////////////////////////////////////
+
+
+
+
+jwt
+contains special information
+1 header    2.payload   3.verify signature(to validate token)
+
+json web token  pakage    we have sign and verify
